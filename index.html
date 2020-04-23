@@ -6,30 +6,39 @@
     <title>Solucion de Problemas</title>
 </head>
 <body>
-    <h1>Suma de dos variables</h1>
+    <h1>Captura de dos variables</h1>
 
-    <p>realizar un software web que capturare 2 valores enteros, los sume y muestre el resultado</p>
+    <p>realizar un software web que capturare 2 valores enteros, los sume, los reste, los multiplique y los divida y ademas que muestre el resultado</p>
     <p>2 variables de entrada son: a y b con valores enteros</p>
     <p>el valor de salida será un entero </p>
-    <p>sumar los valores de a y b y enviarlo en la variable del resultado</p>
+    <p>sumar,  restar, multiplicar y dividir los valores de a y b y enviarlo en la variable del resultado</p>
 
+    <!-- Campos para capturar los valores -->
     <label for="a">ingrese el primer numero</label>
     <input type="number" id="a"><br>
     <label for="b">ingrese el segundo numero</label>
     <input type="number" id="b"><br>
 
+    <!-- el boton que llama a la funcion sumar,restar, multiplicar y dividir -->
     <button onclick="sumar()">sumar</button><br>
+    <button onclick="restar()">restar</button><br>
+    <button onclick="multiplicar()">multiplicar</button><br>
+    <button onclick="dividir()">dividir</button><br>
 
+    <!--input donde se mostrará el resultado-->
     <label for="resultado">Este es el resultado</label>
     <input type="number" id="resultado" name="resultado"><br>
 
 <script>
     function sumar(){
+        //se capturan los valores de los inputs y se almacenan en variables
         var a = document.getElementById("a"). value;
         var b = document.getElementById("b"). value;
+
+        //se define el resultado
         var resultado;
 
-
+        //verificacion de la variables si son cadenas vacias
         if(a == ""){
             a = 0 ;
         }else{
@@ -42,12 +51,104 @@
             b = parseInt(b);
         }
         
+        //ejecuto la suma de las variables
         resultado = a + b;
 
+        //muestro el resultado de la suma en el navegador
         document.getElementById("resultado").value = resultado
     }
     
 
+</script>
+<script>
+    function restar(){
+        //se capturan los valores de los inputs y se almacenan en variables
+        var a = document.getElementById("a"). value;
+        var b = document.getElementById("b"). value;
+
+        //se define el resultado
+        var resultado;
+
+        //verificacion de la variables si son cadenas vacias
+        if(a == ""){
+            a = 0 ;
+        }else{
+            a = parseInt(a);
+        }
+
+        if(b == ""){
+            b = 0 ;
+        }else{
+            b = parseInt(b);
+        }
+        
+        //ejecuto la resta de las variables
+        resultado = a - b;
+        
+        //muestro el resultado de la resta en el navegador
+        document.getElementById("resultado").value = resultado
+    }
+    
+</script>
+<script>
+    function multiplicar(){
+        //se capturan los valores de los inputs y se almacenan en variables
+        var a = document.getElementById("a"). value;
+        var b = document.getElementById("b"). value;
+
+        //se define el resultado
+        var resultado;
+
+        //verificacion de la variables si son cadenas vacias
+        if(a == ""){
+            a = 0 ;
+        }else{
+            a = parseInt(a);
+        }
+
+        if(b == ""){
+            b = 0 ;
+        }else{
+            b = parseInt(b);
+        }
+        
+        //ejecuto la multiplicacion de las variables
+        resultado = (a * b);
+        
+        //muestro el resultado de la multiplicación en el navegador
+        document.getElementById("resultado").value = resultado
+    }
+    
+</script>
+<script>
+    function dividir(){
+        //se capturan los valores de los inputs y se almacenan en variables
+        var a = document.getElementById("a"). value;
+        var b = document.getElementById("b"). value;
+
+        //se define el resultado
+        var resultado;
+
+        //verificacion de la variables si son cadenas vacias
+        if(a == ""){
+            a = 0 ;
+        }else{
+            a = parseInt(a);
+        }
+
+        if(b == ""){
+            b = 0 ;
+        }else{
+            b = parseInt(b);
+        }
+        
+        //ejecuto la división de las variables
+        resultado = a / b;
+        
+        //muestro el resultado de la división en el navegador
+        document.getElementById("resultado").value = resultado
+    }
+    
 </script>
 </body>
 </html>
